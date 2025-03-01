@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Caveat+Brush&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva+Guides&display=swap');
+
+:root {
+    --text-colour: #00000083;
+    --link-colour: #ADFF2F;
+    --background-colour: #FFFFF0;
+    --extra-colour: #008000;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'playfair display', sans-serif;
+    background-color: #f4f4f4 ;
+}
+a {
+    color: var(--link-colour);
+    text-decoration: none;
+}
+
+.header {
+    background-color: black;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    backdrop-filter: blur(15px);
+    justify-content: space-between;
+    z-index: 99;
+
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+    transition: all 0.5 ease ;
+    padding: 2px 5px;
+    font-family: 'caveat brush';
+    backdrop-filter: blur(10px);
+    position: absolute;
+    left: 5px;
+
+    
+
+}
+.logo:hover {
+    color: grey;
+    text-shadow: 0 0 25px grey;
+    transform: scale(1);
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #50c850;
+    padding: 8px 12px;
+    font-size: 16px;
+    transition: color 0.5s ease;
+}
+
+
+.navbar a:hover {
+    color: white; }
+
+    .navbar a:not(:last-child) {
+        margin-right: 50px;
+    }
+    
+
+    .contact {
+        margin-left: 50px;
+        border: 3px solid white;
+        border-radius: 5px;
+        background: beige;
+    
+    }
+    .contact a {
+        color: #008000;
+        letter-spacing: 2px;
+    }
+    .contact a:hover {
+        color: grey;
+    }
+
+
+    .developer {
+        display: flex;
+        justify-content: flex-start; 
+        align-items: center;
+        height: 70vh;
+        padding-left: 50px; 
+        margin-top: 10px;
+        background-color: #f4f4f4; 
+    }
+    
+    .me {
+        
+        width: 100%;
+        align-items: flex-start;
+    }
+    
+    .me h5 {
+        font-size: 25px;
+        color: #666;
+        margin-bottom: 5px;
+        padding-top: 20px;
+        
+    }
+    
+    .me h1 {
+        font-size: 70px;
+        font-weight: bold;
+        line-height: 1.2;
+        color: #333;
+    }
+    
+.changing-text::after {
+    content: "Web Developer"; 
+    animation: textChange 6s infinite;
+    color: #008000;
+}
+
+@keyframes textChange {
+    0% { content: "Developer"; }
+    33% { content: "Podcaster"; }
+    66% { content: "Fashion Enthusiast"; }
+    100% { content: "Developer"; } 
+}
+
+
+    .skills-experience {
+        display: flex;
+        justify-content: flex-start; 
+    gap: 15px;
+    }
+    
+    .btn {
+        margin-top: 30px;
+        margin-right: 20px;
+        display: block;
+        padding: 5px 10px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #cc5500; 
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 8px; 
+        transition: all 0.3s ease-in-out;
+    }
+    
+    
+    .btn:hover {
+        background-color: #008000; 
+        color: #333;
+        transform: scale(1.05); 
+    }
+
+    .picture {
+        width: 420px; 
+        height: 300px; 
+        overflow: hidden; 
+        border-radius: 50%; 
+        margin-right: 170px;
+        margin-top: 30px;
+    }
+    
+    .picture img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+
+    .around{
+        background-color: #87ae73;
+        line-height: 1.5;
+        padding: 2px;
+    }
+    .about-me {
+            position: relative;
+            width: 50%;
+            height: 300px;
+            background:  radial-gradient(circle, rgba(0,128,0,1) 0%, rgba(236,239,241,1) 100%);
+            border-radius: 10px;
+            margin: 50px auto;
+            padding: 30px; 
+            color: black;
+        }
+
+        .about-me::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 30px;
+            background-color: #f4f4f4; 
+            clip-path: polygon(40% 100%, 0% 0%, 100% 0%);
+        }
+
+        .about-me::after {
+            content: "";
+            position: absolute;
+            top: 3px; 
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 25px;
+            background-color: #678867; 
+            clip-path: polygon(40% 100%, 0% 0%, 100% 0%);
+            filter: drop-shadow(10px 10px 5px rgba(34, 116, 14, 0.5)); 
+        }
+    
+    .about-me h3 {
+        font-size: 2rem; 
+        margin-bottom: 10px; 
+        text-align: center;
+        padding-top: 20px;
+        text-decoration: underline;
+        font-family: "Merriweather", serif;   
+    }
+    
+    .about-me p {
+        font-size: 1rem; 
+        line-height: 1.6; 
+        font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.box-title {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    width: 100%;
+    margin: 0 auto;
+    background-color: #87ae73;
+}
+
+
+.podcaster {
+    border: 2px solid #678867;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 25px 25px 25px black;
+    
+    
+}
+
+.podcaster h3 {
+    color: #008080;
+}
+
+.podcaster a {
+    color:  #b7410e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.podcaster a:hover {
+    text-decoration: underline;
+}
+
+
+.web-developer {
+    border: 2px solid #678867;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 25px 25px 25px black;
+    
+}
+
+.web-developer h3 {
+    color: #008080;
+}
+
+.web-developer a {
+    color: #b7410e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.web-developer a:hover {
+    text-decoration: underline;
+}
+
+
+.fashion-enthusiast {
+    border: 2px solid #678867;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 25px 25px 25px black;
+    
+    
+}
+
+.fashion-enthusiast h3 {
+    color: #008080;
+}
+
+.fashion-enthusiast a {
+    color: #b7410e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.fashion-enthusiast a:hover {
+    text-decoration: underline;
+} 
+        
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.social-media {
+    margin-bottom: 15px;
+}
+
+.social-media a {
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: #008000; 
+}
+
+.address p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.copyright p {
+    margin: 10px 0 0;
+    font-size: 12px;
+    color: #ccc;
+}   
